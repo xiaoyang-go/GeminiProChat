@@ -200,7 +200,7 @@ export default () => {
     if (e.isComposing || e.shiftKey)
       return
 
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter'&& e.ctrlKey) {
       e.preventDefault()
       handleButtonClick()
     }
@@ -268,7 +268,7 @@ export default () => {
               inputRef.style.height = 'auto'
               inputRef.style.height = `${inputRef.scrollHeight}px`
             }}
-            rows="1"
+            rows="8"
             class="gen-textarea"
           />
           <button onClick={handleButtonClick} gen-slate-btn>
